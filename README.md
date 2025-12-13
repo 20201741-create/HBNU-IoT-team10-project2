@@ -4,7 +4,7 @@
 
 ## 개요
 
-이 저장소는 시뮬레이션 데이터 생성(`arima` 폴더), 연합 학습 시뮬레이션(`flower` 폴더), 평가 및 시각화 도구를 포함합니다. 연합 학습 프레임워크로는 PyTorch 기반의 `Flower`를 사용하며, 중앙집중식 기준선(baseline) 모델로는 `LSTM`을 사용합니다.
+이 저장소는 시뮬레이션 데이터 생성(`arima` 폴더), 연합 학습 시뮬레이션(`flower` 폴더), 평가 및 시각화 도구를 포함합니다. 연합 학습 프레임워크로는 PyTorch 기반의 `Flower`를 사용하며, baseline 모델로는 `LSTM`을 사용합니다.
 
 ## 실행/설치 매뉴얼(macOS를 기준으로 작성되었습니다.)
 
@@ -17,7 +17,7 @@ source install.sh
 
 > 참고: 시스템에 따라 `bash` 대신 `zsh`에서 `source` 사용이 필요할 수 있습니다.
 
-## 사용 방법 (Usage)
+## Usage
 
 1. 적절한 conda 환경을 활성화하세요(위 `install.sh`가 환경을 생성한 경우 해당 환경을 활성화).
 
@@ -43,12 +43,12 @@ source run.sh
 4. 평가 및 결과 보기:
 - 시뮬레이션 완료 후 결과는 `flower/evaluation` 디렉터리에 PDF 및 HTML 형태로 저장됩니다.
 
-## 결과 확인 (Results)
+## Results
 
 - 대시보드: `flower/evaluation/DASHBOARD.html` 을 열어 시각화된 결과를 확인하세요.
 - 학습된 모델은 `flower/saved_models` 에 저장됩니다.
 
-## 참고문헌 (Reference)
+## Reference
 
 Maryam Motamedi, Na Li, Douglas G Down, and Nancy M Heddle. 2021. Demand forecasting for platelet usage: from univariate time series to multivariate models. [arXiv preprint arXiv:2101.02305](https://arxiv.org/abs/2101.02305) (2021)
 
