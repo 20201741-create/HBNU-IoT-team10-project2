@@ -23,7 +23,7 @@ pip install --upgrade kaleido
 mkdir -p flower/savedmodels
 mkdir -p flower/evaluation
 
-conda install "pandas<2.0.0”
+conda install "pandas<2.0.0"
 ```
 
 > 참고: 시스템에 따라 `bash` 대신 `zsh`에서 `source` 사용이 필요할 수 있습니다.
