@@ -2,7 +2,7 @@
 
 연합 학습을 이용한 혈액 공급망 수요 예측 연구용 시뮬레이션 코드 저장소입니다. 이 저장소는 KDD 2023 워크숍 논문 [Federated Blood Supply Chain Demand Forecasting: A Case Study](https://openreview.net/forum?id=2c0hdQDvf5g)의 시뮬레이션 및 재현을 위해 제공됩니다.
 
-## 개요
+## 개요 및 실행/설치 매뉴얼(macOS를 기준으로 작성되었습니다.)
 
 이 저장소는 시뮬레이션 데이터 생성(`arima` 폴더), 연합 학습 시뮬레이션(`flower` 폴더), 평가 및 시각화 도구를 포함합니다. 연합 학습 프레임워크로는 PyTorch 기반의 `Flower`를 사용하며, baseline 모델로는 `LSTM`을 사용합니다.
 
