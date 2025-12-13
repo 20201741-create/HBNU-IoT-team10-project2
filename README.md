@@ -48,6 +48,8 @@ source run.sh
 # 생성된 데이터는 기본적으로 arima/data 디렉터리에 저장됩니다.
 ```
 
+> 참고: generate_heterogenous 환경의 경우 생성된 시뮬레이션 데이터의 이름을 C#.csv의 형태로 변경해 주어야 합니다.
+
 ## 결과
 
 - 시뮬레이션 완료 후 결과는 `flower/evaluation` 디렉터리에 PDF 및 HTML 형태로 저장됩니다.
