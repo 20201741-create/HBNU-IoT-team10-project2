@@ -41,6 +41,8 @@ python arima/generate_case_random_zeros.py
 python arima/generate_heterogenous_add.py
 python arima/generate_heterogenous_concat.py
 
+# 생성하고 싶은 시뮬레이션 환경 명령어 입력
+
 source run.sh
 
 # 생성된 데이터는 기본적으로 arima/data 디렉터리에 저장됩니다.
