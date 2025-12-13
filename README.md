@@ -23,8 +23,13 @@ source install.sh
 - `arima` 폴더에는 클라이언트별 시뮬레이션 데이터를 생성하는 스크립트들이 있습니다. 예를 들어 균형된 IID 케이스 데이터를 생성하려면:
 
 ```bash
-cd arima
-python generate_case_balanced_iid.py
+git clone https://github.com/denoslab/fl-blood-supply-chain.git
+cd fl-blood-supply-chain
+conda activate flower
+python arima/generate_case_balanced_iid.py
+mkdir -p flower/savemodels
+mkdir -p flower/evaluation
+source run.sh
 
 # 생성된 데이터는 기본적으로 arima/data 디렉터리에 저장됩니다.
 ```
