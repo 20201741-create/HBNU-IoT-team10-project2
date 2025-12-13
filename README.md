@@ -28,39 +28,25 @@ conda install "pandas<2.0.0”
 
 > 참고: 시스템에 따라 `bash` 대신 `zsh`에서 `source` 사용이 필요할 수 있습니다.
 
-## Usage
-
-1. 적절한 conda 환경을 활성화하세요(위 `install.sh`가 환경을 생성한 경우 해당 환경을 활성화).
-
-2. 시뮬레이션용 데이터 생성:
-- `arima` 폴더에는 클라이언트별 시뮬레이션 데이터를 생성하는 스크립트들이 있습니다. 예를 들어 균형된 IID 케이스 데이터를 생성하려면:
+### 실행 환경
 
 ```bash
-git clone https://github.com/denoslab/fl-blood-supply-chain.git
-cd fl-blood-supply-chain
 conda activate flower
+
 python arima/generate_case_balanced_iid.py
-mkdir -p flower/savemodels
-mkdir -p flower/evaluation
+python arima/generate_case_imbalanced_iid.py
+python arima/generate_case_random_zeros.py
+python arima/generate_heterogenous_add.py
+python arima/generate_heterogenous_concat.py
+
 source run.sh
 
 # 생성된 데이터는 기본적으로 arima/data 디렉터리에 저장됩니다.
 ```
 
-3. 중앙집중식 기준선 및 연합 학습 실행:
-- 루트 폴더의 `run.sh` 스크립트는 중앙집중식 학습과 연합 학습 시뮬레이션(클라이언트 로컬 학습 포함)을 자동으로 실행합니다.
+## 결과
 
-```bash
-source run.sh
-```
-
-- 또는 직접 실행하려면 `flower/central.py`(중앙집중식 LSTM baseline) 및 `flower/fl_simulation.py`(연합 학습 시뮬레이션)를 참고하세요.
-
-4. 평가 및 결과 보기:
 - 시뮬레이션 완료 후 결과는 `flower/evaluation` 디렉터리에 PDF 및 HTML 형태로 저장됩니다.
-
-## Results
-
 - 대시보드: `flower/evaluation/DASHBOARD.html` 을 열어 시각화된 결과를 확인하세요.
 - 학습된 모델은 `flower/saved_models` 에 저장됩니다.
 
