@@ -24,6 +24,7 @@ mkdir -p flower/savedmodels
 mkdir -p flower/evaluation
 
 conda install "pandas<2.0.0"
+
 # Pandas 다운그레이드
 ```
 
@@ -39,6 +40,7 @@ python arima/generate_case_imbalanced_iid.py
 python arima/generate_case_random_zeros.py
 python arima/generate_heterogenous_add.py
 python arima/generate_heterogenous_concat.py
+
 # 생성하고 싶은 시뮬레이션 환경 명령어 입력
 
 source run.sh
