@@ -6,11 +6,24 @@
 
 이 저장소는 시뮬레이션 데이터 생성(`arima` 폴더), 연합 학습 시뮬레이션(`flower` 폴더), 평가 및 시각화 도구를 포함합니다. 연합 학습 프레임워크로는 PyTorch 기반의 `Flower`를 사용하며, baseline 모델로는 `LSTM`을 사용합니다.
 
+### 설치 환경
+
 - 사전 요구사항: `conda` 설치 (또는 호환 가능한 Python 환경)
 - 의존성 설치 및 conda 환경 생성은 제공된 스크립트 `install.sh`로 자동화되어 있습니다.
+- 다만, 2025년 12월 기준 호환되지 않는 환경이 있기에 아나콘다 설치를 권장합니다.
 
 ```bash
+git clone https://github.com/denoslab/fl-blood-supply-chain.git
+cd fl-blood-supply-chain
+
 source install.sh
+pip install -U "flwr[simulation]"
+pip install --upgrade kaleido
+
+mkdir -p flower/savedmodels
+mkdir -p flower/evaluation
+
+conda install "pandas<2.0.0”
 ```
 
 > 참고: 시스템에 따라 `bash` 대신 `zsh`에서 `source` 사용이 필요할 수 있습니다.
