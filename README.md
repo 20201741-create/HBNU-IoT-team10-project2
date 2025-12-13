@@ -1,68 +1,53 @@
 # fl-blood-supply-chain
 
-Federated learning for blood supply chain. Simulation code repo for the paper [Federated Blood Supply Chain Demand Forecasting: A Case Study](https://openreview.net/forum?id=2c0hdQDvf5g), published in KDD 2023 International Workshop on Federated Learning for Distributed Data Mining.
+연합 학습(Federated Learning)을 이용한 혈액 공급망 수요 예측 연구용 시뮬레이션 코드 저장소입니다. 이 저장소는 KDD 2023 워크숍 논문 "Federated Blood Supply Chain Demand Forecasting: A Case Study"의 시뮬레이션 및 재현을 위해 제공됩니다.
 
+## 개요
 
+이 저장소는 시뮬레이션 데이터 생성(`arima` 폴더), 연합 학습 시뮬레이션(`flower` 폴더), 평가 및 시각화 도구를 포함합니다. 연합 학습 프레임워크로는 PyTorch 기반의 `Flower`를 사용하며, 중앙집중식 기준선(baseline) 모델로는 `LSTM`을 사용합니다.
 
-## Overview
+## 설치 (Installation)
 
-Federated learning offers a decentralized approach when it comes to training a machine learning model. It allows multiple parties to collabortively train a predictive model without sharing their data. This project aims to explore the possibility of using federated learning to train a predictive model for blood supply chain.
+- 사전 요구사항: `conda` 설치 (또는 호환 가능한 Python 환경)
+- 의존성 설치 및 conda 환경 생성은 제공된 스크립트 `install.sh`로 자동화되어 있습니다.
 
-<p align="center">
-  <img src="docs/images/fl-bscm.png" width="600" /><br />
-  Figure 1. Project architecture overview.
-</p>
-
-This repo contains the code for the project. We are exploring the possibility of using federated learning to train a predictive model for blood supply chain using simulated data based on ARIMA model.
-
-In this project, we are using Flower, a federated learning framework for PyTorch, to simulate the federated learning process. We are using a LSTM model as the baseline for the centralized training. The data pipeline is shown in the figure below.
-
-<p align="center">
-  <img src="docs/images/lstm.png" width="600" /><br />
-  Figure 2. Proposed data pipeline.
-</p>
-
-
-## Installation
-- Make sure you have conda installed
-- Run the following command to install the required packages
-- `install.sh` has the shell script that creates new conda environment and installs the required packages
 ```bash
 source install.sh
 ```
 
-## Usage
-- Make sure you are in the right conda environment before running the code
-- In the directory `arima`, it contains script that generates the data for clients 1 - 5
-- First, we need to generate the data for the clients. The data is generated based on ARIMA model. The data is generated for 5 clients. The data is stored in the `arima/data` directory.Each Python file has a function that generates the data for each client. For example, you may run the following command that generates data for the balanced iid case. The data will be stored in the `arima/data` directory. 
+> 참고: 시스템에 따라 `bash` 대신 `zsh`에서 `source` 사용이 필요할 수 있습니다.
+
+## 사용 방법 (Usage)
+
+1. 적절한 conda 환경을 활성화하세요(위 `install.sh`가 환경을 생성한 경우 해당 환경을 활성화).
+
+2. 시뮬레이션용 데이터 생성:
+- `arima` 폴더에는 클라이언트별 시뮬레이션 데이터를 생성하는 스크립트들이 있습니다. 예를 들어 균형된 IID 케이스 데이터를 생성하려면:
+
 ```bash
+cd arima
 python generate_case_balanced_iid.py
+
+# 생성된 데이터는 기본적으로 arima/data 디렉터리에 저장됩니다.
 ```
+
+3. 중앙집중식 기준선 및 연합 학습 실행:
+- 루트 폴더의 `run.sh` 스크립트는 중앙집중식 학습과 연합 학습 시뮬레이션(클라이언트 로컬 학습 포함)을 자동으로 실행합니다.
 
 ```bash
 source run.sh
 ```
-- In the directory `flower`, it contains `central.py` which is a LSTM model as a baseline for the centralized training. 
-- `run.sh` contains the script which runs the code for the centralized training and the federated learning simulation which will also start the localized training for each client. After running the simulations, the results will be stored as both pdfs and html format in the `flower/evaluation` directory.
 
-## Results
+- 또는 직접 실행하려면 `flower/central.py`(중앙집중식 LSTM baseline) 및 `flower/fl_simulation.py`(연합 학습 시뮬레이션)를 참고하세요.
 
-- After running `run.sh`, open `DASHBOARD.html` to see all the results, and the saved models wil be inside the `flower/saved_models` directory.
-- Current approach uses data generated from ARIMA model for training and predictions
+4. 평가 및 결과 보기:
+- 시뮬레이션 완료 후 결과는 `flower/evaluation` 디렉터리에 PDF 및 HTML 형태로 저장됩니다.
 
-## Reference
+## 결과 확인 (Results)
 
-\[15\] Maryam Motamedi, Na Li, Douglas G Down, and Nancy M Heddle. 2021. Demand
-forecasting for platelet usage: from univariate time series to multivariate models.
-[arXiv preprint arXiv:2101.02305](https://arxiv.org/abs/2101.02305) (2021)
+- 대시보드: `flower/evaluation/DASHBOARD.html` 을 열어 시각화된 결과를 확인하세요.
+- 학습된 모델은 `flower/saved_models` 에 저장됩니다.
 
-## Citation
+## 참고문헌 (Reference)
 
-```
-@inproceedings{wei2023federated,
-  title={Federated Blood Supply Chain Demand Forecasting: A Case Study},
-  author={Wei, Hanzhe and Li, Na and Wu, Jiajun and Zhou, Jiayu and Drew, Steve},
-  booktitle={International Workshop on Federated Learning for Distributed Data Mining},
-  year={2023}
-}
-```
+Maryam Motamedi, Na Li, Douglas G Down, and Nancy M Heddle. 2021. Demand forecasting for platelet usage: from univariate time series to multivariate models. [arXiv preprint arXiv:2101.02305](https://arxiv.org/abs/2101.02305) (2021)
