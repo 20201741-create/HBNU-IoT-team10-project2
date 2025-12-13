@@ -1,6 +1,6 @@
-# fl-blood-supply-chain
+# Federated Blood Supply Chain Demand Forecasting: 연합학습을 이용한 혈액 공급망 수요 예측
 
-연합 학습(Federated Learning)을 이용한 혈액 공급망 수요 예측 연구용 시뮬레이션 코드 저장소입니다. 이 저장소는 KDD 2023 워크숍 논문 "Federated Blood Supply Chain Demand Forecasting: A Case Study"의 시뮬레이션 및 재현을 위해 제공됩니다.
+연합 학습을 이용한 혈액 공급망 수요 예측 연구용 시뮬레이션 코드 저장소입니다. 이 저장소는 KDD 2023 워크숍 논문 "Federated Blood Supply Chain Demand Forecasting: A Case Study"의 시뮬레이션 및 재현을 위해 제공됩니다.
 
 ## 개요
 
