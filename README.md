@@ -29,8 +29,6 @@ conda install "pandas<2.0.0"
 
 > 참고: 시스템에 따라 `bash` 대신 `zsh`에서 `source` 사용이 필요할 수 있습니다.
 
-> Pandas 다운그레이드를 원치 않으신다면 flower/preprocessing.py의 df.append(df2, ignore_index = True)를 df = pd.concat([df, df2], ignore_index=True)로 바꿔주어야 합니다.
-
 ### 실행 환경
 
 ```bash
