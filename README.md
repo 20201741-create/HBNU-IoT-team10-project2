@@ -1,6 +1,6 @@
 # Federated Blood Supply Chain Demand Forecasting: 연합학습을 이용한 혈액 공급망 수요 예측
 
-연합 학습을 이용한 혈액 공급망 수요 예측 연구용 시뮬레이션 코드 저장소입니다. 이 저장소는 KDD 2023 워크숍 논문 "Federated Blood Supply Chain Demand Forecasting: A Case Study"의 시뮬레이션 및 재현을 위해 제공됩니다.
+연합 학습을 이용한 혈액 공급망 수요 예측 연구용 시뮬레이션 코드 저장소입니다. 이 저장소는 KDD 2023 워크숍 논문 [Federated Blood Supply Chain Demand Forecasting: A Case Study](https://openreview.net/forum?id=2c0hdQDvf5g)의 시뮬레이션 및 재현을 위해 제공됩니다.
 
 ## 개요
 
@@ -51,3 +51,14 @@ source run.sh
 ## 참고문헌 (Reference)
 
 Maryam Motamedi, Na Li, Douglas G Down, and Nancy M Heddle. 2021. Demand forecasting for platelet usage: from univariate time series to multivariate models. [arXiv preprint arXiv:2101.02305](https://arxiv.org/abs/2101.02305) (2021)
+
+## Citation
+
+```
+@inproceedings{wei2023federated,
+  title={Federated Blood Supply Chain Demand Forecasting: A Case Study},
+  author={Wei, Hanzhe and Li, Na and Wu, Jiajun and Zhou, Jiayu and Drew, Steve},
+  booktitle={International Workshop on Federated Learning for Distributed Data Mining},
+  year={2023}
+}
+```
