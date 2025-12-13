@@ -41,7 +41,6 @@ python arima/generate_case_imbalanced_iid.py
 python arima/generate_case_random_zeros.py
 python arima/generate_heterogenous_add.py
 python arima/generate_heterogenous_concat.py
-
 # 생성하고 싶은 시뮬레이션 환경 명령어 입력
 
 source run.sh
