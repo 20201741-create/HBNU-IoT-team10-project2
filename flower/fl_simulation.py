@@ -208,7 +208,7 @@ if __name__ == "__main__":
     # strategy = CustomStrategy(proximal_mu=1)
     strategy = CustomStrategy()
 
-    initial_parameters = fl.common.ndarrays_to_parameters(get_parameters(get_model(MODEL, MODEL_PARAMS).to(DEVICE)))
+    # initial_parameters = fl.common.ndarrays_to_parameters(get_parameters(get_model(MODEL, MODEL_PARAMS).to(DEVICE)))
 
     # strategy = CustomStrategy(initial_parameters=initial_parameters, eta=0.001, beta_2=0.999, tau=1e-3) # FedAdam
     # strategy = CustomStrategy(initial_parameters=initial_parameters, eta=0.005, tau=1e-3) # FedYogi
