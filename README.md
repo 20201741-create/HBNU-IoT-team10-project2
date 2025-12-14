@@ -30,16 +30,20 @@ conda install "pandas<2.0.0"
 
 > 참고: 시스템에 따라 `bash` 대신 `zsh`에서 `source` 사용이 필요할 수 있습니다.
 
-## 사용 방법 (Usage)
-
-1. 적절한 conda 환경을 활성화하세요(위 `install.sh`가 환경을 생성한 경우 해당 환경을 활성화).
-
-2. 시뮬레이션용 데이터 생성:
-- `arima` 폴더에는 클라이언트별 시뮬레이션 데이터를 생성하는 스크립트들이 있습니다. 예를 들어 균형된 IID 케이스 데이터를 생성하려면:
+### 실행 환경
 
 ```bash
-cd arima
-python generate_case_balanced_iid.py
+conda activate flower
+
+python arima/generate_case_balanced_iid.py
+python arima/generate_case_imbalanced_iid.py
+python arima/generate_case_random_zeros.py
+python arima/generate_heterogenous_add.py
+python arima/generate_heterogenous_concat.py
+
+# 생성하고 싶은 시뮬레이션 환경 명령어 입력
+
+source install.sh
 
 # 생성된 데이터는 기본적으로 arima/data 디렉터리에 저장됩니다.
 ```
