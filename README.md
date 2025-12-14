@@ -56,6 +56,12 @@ source install.sh
 - 대시보드: `flower/evaluation/DASHBOARD.html` 을 열어 시각화된 결과를 확인하세요.
 - 학습된 모델은 `flower/saved_models` 에 저장됩니다.
 
+## 프로젝트 수행 내용
+
+- 데이터 예측 모델 GRU 추가 후 실행
+- 연합학습 알고리즘 개선 시도
+- 하이퍼파라미터 변경 후 구현체 실행
+
 ## Reference
 
 Maryam Motamedi, Na Li, Douglas G Down, and Nancy M Heddle. 2021. Demand forecasting for platelet usage: from univariate time series to multivariate models. [arXiv preprint arXiv:2101.02305](https://arxiv.org/abs/2101.02305) (2021)
