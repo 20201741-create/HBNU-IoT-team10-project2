@@ -48,23 +48,25 @@ source install.sh
 # 생성된 데이터는 기본적으로 arima/data 디렉터리에 저장됩니다.
 ```
 
-3. 중앙집중식 기준선 및 연합 학습 실행:
-- 루트 폴더의 `run.sh` 스크립트는 중앙집중식 학습과 연합 학습 시뮬레이션(클라이언트 로컬 학습 포함)을 자동으로 실행합니다.
+> 참고: generate_heterogenous 환경의 경우 생성된 시뮬레이션 데이터의 이름을 C#.csv의 형태로 변경해 주어야 합니다.
 
-```bash
-source run.sh
-```
+## 결과
 
-- 또는 직접 실행하려면 `flower/central.py`(중앙집중식 LSTM baseline) 및 `flower/fl_simulation.py`(연합 학습 시뮬레이션)를 참고하세요.
-
-4. 평가 및 결과 보기:
 - 시뮬레이션 완료 후 결과는 `flower/evaluation` 디렉터리에 PDF 및 HTML 형태로 저장됩니다.
-
-## 결과 확인 (Results)
-
 - 대시보드: `flower/evaluation/DASHBOARD.html` 을 열어 시각화된 결과를 확인하세요.
 - 학습된 모델은 `flower/saved_models` 에 저장됩니다.
 
-## 참고문헌 (Reference)
+## Reference
 
 Maryam Motamedi, Na Li, Douglas G Down, and Nancy M Heddle. 2021. Demand forecasting for platelet usage: from univariate time series to multivariate models. [arXiv preprint arXiv:2101.02305](https://arxiv.org/abs/2101.02305) (2021)
+
+## Citation
+
+```
+@inproceedings{wei2023federated,
+  title={Federated Blood Supply Chain Demand Forecasting: A Case Study},
+  author={Wei, Hanzhe and Li, Na and Wu, Jiajun and Zhou, Jiayu and Drew, Steve},
+  booktitle={International Workshop on Federated Learning for Distributed Data Mining},
+  year={2023}
+}
+```
