@@ -29,6 +29,7 @@ conda install "pandas<2.0.0"
 ```
 
 > 참고: 시스템에 따라 `bash` 대신 `zsh`에서 `source` 사용이 필요할 수 있습니다.
+
 > install.sh에 해당 설치 환경을 위한 명령어 추가를 권장합니다.
 
 ### 실행 환경
