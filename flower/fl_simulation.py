@@ -211,8 +211,8 @@ if __name__ == "__main__":
     # initial_parameters = fl.common.ndarrays_to_parameters(get_parameters(get_model(MODEL, MODEL_PARAMS).to(DEVICE)))
 
     # strategy = CustomStrategy(initial_parameters=initial_parameters, eta=0.001, beta_2=0.999, tau=1e-3) # FedAdam
-    # strategy = CustomStrategy(initial_parameters=initial_parameters, eta=0.001, tau=1e-3) # FedYogi
-    # strategy = CustomStrategy(initial_parameters=initial_parameters, eta=0.01, tau=1e-3) # FedAdagrad
+    # strategy = CustomStrategy(initial_parameters=initial_parameters, eta=0.01, tau=1e-3) # FedYogi
+    # strategy = CustomStrategy(initial_parameters=initial_parameters, eta=0.1, tau=1e-3) # FedAdagrad
 
     fl.simulation.start_simulation(
         client_fn=client_fn,
