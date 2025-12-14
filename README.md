@@ -24,12 +24,14 @@ source install.sh
 pip install -U "flwr[simulation]"
 pip install --upgrade kaleido
 
-mkdir -p flower/savedmodels
-mkdir -p flower/evaluation
-
 conda install "pandas<2.0.0"
 
 # Pandas 다운그레이드
+```
+
+```bash
+mkdir -p flower/savedmodels
+mkdir -p flower/evaluation
 ```
 
 > 참고: 시스템에 따라 `bash` 대신 `zsh`에서 `source` 사용이 필요할 수 있습니다.
