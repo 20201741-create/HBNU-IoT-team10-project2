@@ -13,6 +13,10 @@
 - 다만, 2025년 12월 기준 호환되지 않는 환경이 있기에 아나콘다 설치를 권장합니다.
 
 ```bash
+source install.sh
+```
+
+```bash
 git clone https://github.com/denoslab/fl-blood-supply-chain.git
 cd fl-blood-supply-chain
 
