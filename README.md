@@ -43,7 +43,7 @@ python arima/generate_heterogenous_concat.py
 
 # 생성하고 싶은 시뮬레이션 환경 명령어 입력
 
-source install.sh
+source run.sh
 
 # 생성된 데이터는 기본적으로 arima에 저장됩니다.
 ```
