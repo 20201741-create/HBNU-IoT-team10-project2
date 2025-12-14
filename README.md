@@ -40,7 +40,9 @@ conda install "pandas<2.0.0"
 
 ```bash
 conda activate flower
+```
 
+```bash
 python arima/generate_case_balanced_iid.py
 python arima/generate_case_imbalanced_iid.py
 python arima/generate_case_random_zeros.py
