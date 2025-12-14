@@ -13,7 +13,19 @@
 - 다만, 2025년 12월 기준 호환되지 않는 환경이 있기에 아나콘다 설치를 권장합니다.
 
 ```bash
+git clone https://github.com/denoslab/fl-blood-supply-chain.git
+cd fl-blood-supply-chain
+
 source install.sh
+pip install -U "flwr[simulation]"
+pip install --upgrade kaleido
+
+mkdir -p flower/savedmodels
+mkdir -p flower/evaluation
+
+conda install "pandas<2.0.0"
+
+# Pandas 다운그레이드
 ```
 
 > 참고: 시스템에 따라 `bash` 대신 `zsh`에서 `source` 사용이 필요할 수 있습니다.
